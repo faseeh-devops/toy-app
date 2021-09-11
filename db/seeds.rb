@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user = User.create(name: 'Ali',email: 'ali@gmail.com')
+micro = Micropost.create(content: 'This is a test Micropost for Ali', user_id: 1)
