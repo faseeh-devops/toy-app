@@ -1,15 +1,16 @@
-<%= form_with(model: micropost, local: true) do |form| %>
-  <% if micropost.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(micropost.errors.count, "error") %> prohibited this micropost from being saved:</h2>
+<%#= form_for(model: [@user, @micropost], local: true) do |form| %>
+  <%= simple_form_for([@user, @user.microposts.build]) do |form| %>
+  <%# if @micropost.errors.any? %>
+<!--    <div id="error_explanation">-->
+<!--      <h2><%#= pluralize(@micropost.errors.count, "error") %> prohibited this micropost from being saved:</h2>-->
 
-      <ul>
-      <% micropost.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<!--      <ul>-->
+      <%# @micropost.errors.full_messages.each do |message| %>
+<!--        <li><%#= message %></li>-->
+      <%# end %>
+<!--      </ul>-->
+<!--    </div>-->
+  <%# end %>
 
   <div class="field">
     <%= form.label :content %>
@@ -25,3 +26,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+
