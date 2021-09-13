@@ -10,13 +10,10 @@
   <%= @user.email %>
 </p>
 
-<div class="micropost-form">
-  <hr>
-  <h3>
-    Create a Micropost
-  </h3>
-  <%= render 'microposts/form' %>
-</div>
+<h2>Posts</h2>
+<% @user.microposts.each do |item| %>
+   <p><%=item.content %></p>
 
+<% end %>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
